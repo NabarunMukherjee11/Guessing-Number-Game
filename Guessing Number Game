@@ -1,0 +1,45 @@
+import random
+n= random.randint(1,100)
+print("Lets start guessing number game \n")
+print("Guess the number hidden inside the system\n")
+print("You will only have 9 chances to guess\n")
+c=9
+while(1):
+    x=int(input("Guess the number\n"))
+    if x>n:
+        print("Guess a smaller number\n")
+        c=c-1
+        print("Chances left ", c)
+        if c==0:
+            print("Game over\n")
+            d=input("Want to play it again?(Type yes or no)")
+            if d=="yes":
+                c=9
+                continue
+            if d=="no":
+                print("Goodbye friend\n")
+                break
+        continue
+    elif x<n:
+        print("Guess a greater number\n")
+        c=c-1
+        print("Chances left ", c)
+        if c==0:
+            print("Game over\n")
+            b=input("Want to play it again?(Type yes or no)\n")
+            if b=="yes":
+                c=9
+                continuex
+                print("Goodbye friend\n")
+                break
+        continue
+    if x==n:
+        c=c-1
+        print("you completed the guess in chances ", c)
+        a=input("Want to play it again?(Type yes or no)\n")
+        if a=="yes":
+            c=9
+            continue
+        if a=="no":
+            print("Goodbye friend\n")
+            break
